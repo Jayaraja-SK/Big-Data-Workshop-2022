@@ -1,5 +1,5 @@
 # Big-Data-Workshop-2022
-
+Credit: https://github.com/Jayaraja-SK/Stream-Data-Ingestion-and-Processing-Workshop
 ## Apache Kafka
 - Distributed data store optimized for ingesting and processing stream data in real time
 - Functions
