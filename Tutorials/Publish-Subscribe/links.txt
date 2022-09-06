@@ -3,3 +3,5 @@ Publish-Subscribe Tutorial: https://ably.com/topic/pub-sub#:~:text=The%20Publish
 Publish-Subscribe Architecture: https://www.youtube.com/watch?v=O1PgqUqZKTA
 
 Publish-Subscribe Code Example: https://github.com/cevheri/java-kafka-jhipster-example
+
+Spark SQL: https://github.com/kitrak-rev/Big-Data-Workshop-2022.git 
