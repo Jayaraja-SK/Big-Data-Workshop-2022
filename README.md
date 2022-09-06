@@ -1,6 +1,6 @@
 # Big-Data-Workshop-2022
 
-##Credits
+## Credits
 https://github.com/Jayaraja-SK/Stream-Data-Ingestion-and-Processing-Workshop
 ### Directory Structure
 - [Install Software](Installation-Procedure/Latest): Install the latest versions of Java, Spark, Kafka, Maven and Eclipse
