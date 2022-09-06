@@ -1,5 +1,5 @@
 1. JAVA:
-	FOLLOW THE BELOW STEPS:
+	FOLLOW THE STEPS BELOW:
 		a) RUN - sudo apt update
 		b) RUN - sudo apt install default-jdk
 		c) RUN - sudo apt update
@@ -7,11 +7,11 @@
 
 	CONFIRMATION:
 		a) WRITE A JAVA PROGRAM
-		b) COMPILE AND RUN IT IN THE TERMINAL USING javac "FILE_NAME.java" and java "FILE_NAME" RESPECTIVELY
+		b) COMPILE AND RUN IT IN THE TERMINAL USING javac "FILE_NAME.java" and java "FILE_NAME" 
 
 
 2. SPARK:
-	FOLLOW THE BELOW STEPS:
+	FOLLOW THE STEPS BELOW:
 		a) RUN - sudo apt install default-jdk scala git -y
 		b) INSTALL THE PACKAGE "spark-3.1.2-bin-hadoop2.7.tgz" FROM "https://downloads.apache.org/spark/spark-3.1.2/"
 		c) RUN - tar xvf spark-*
@@ -23,11 +23,10 @@
 
 	CONFIRMATION:
 		a) RUN - spark-shell
-		b) CLICK THE IP ADDRESS PRESENT IN THE TERMINAL TO CHECK WHETHER EVERYTHING IS ALRIGHT
 
 
 3. KAFKA
-	FOLLOW THE BELOW STEPS
+	FOLLOW THE STEPS BELOW:
 		a) INSTALL THE PACKAGE "kafka_2.12-2.8.0.tgz" FROM "https://kafka.apache.org/downloads.html"
 		b) RUN - tar xvf kafka*
 		c) RUN - sudo mv kafka_2.12-2.8.0 /opt/kafka
@@ -35,7 +34,7 @@
 		e) RUN - sudo touch zookeeper.service
 		f) RUN - sudo chmod 777 zookeeper.service
 		g) RUN - sudo cat > zookeeper.service
-		h) PASTE THE BELOW TEXT
+		h) PASTE THE FOLLOWING TEXT:
 			[Unit]
 			Description=Apache Zookeeper server
 			Documentation=http://zookeeper.apache.org
@@ -53,13 +52,13 @@
 			[Install]
 			WantedBy=multi-user.target
 
-		***NOTE: UNDER ENVIRONMENT VARIABLE, PASTE THE CORRECT PATH IN IT FOR THE VERSION THAT YOU HAVE***
+		***NOTE: UPDATE THE ENVIRONMENT VARIABLES WITH THE PATH TO THE VERSION YOU HAVE***
 		
 		i) RUN - sudo chmod 644 zookeeper.service
 		j) RUN - sudo touch kafka.service
 		k) RUN - sudo chmod 777 kafka.service
 		l) RUN - sudo cat > kafka.service
-		m) PASTE THE BELOW TEXT
+		m) PASTE THE FOLLOWING TEXT:
 			[Unit]
 			Description=Apache Kafka Server
 			Documentation=http://kafka.apache.org/documentation.html
@@ -83,11 +82,11 @@
 		t) RUN - sudo systemctl status kafka
 
 	CONFIRMATION:
-		a) IF YOU GET THE STATUS AS ACTIVE(GREEN SYMBOL) WHEN YOU RUN THE COMMANDS PRESENT IN LINE (r) AND (t), THEN EVERYTHING IS PERFECT
+		a) RUN THE COMMANDS PRESENT IN LINE (r) AND (t), CHECK IF YOU GET THE STATUS AS ACTIVE(GREEN SYMBOL)
 
 
 4. MAVEN
-	FOLLOW THE BELOW STEPS
+	FOLLOW THE STEPS BELOW:
 		a) INSTALL THE PACKAGE "apache-maven-3.8.1-bin.tar.gz" FROM "https://maven.apache.org/download.cgi"
 		b) RUN - tar xvf apache-maven*
 		c) RUN - sudo mv apache-maven-3.8.1 /opt/maven
@@ -106,9 +105,10 @@
 	CONFIRMATION
 		a) RUN - mvn -version
 
+
 5. ECLIPSE
-	FOLLOW THE BELOW STEPS
+	FOLLOW THE STEPS BELOW:
 		a) RUN - sudo snap install --classic eclipse
 
 	CONFIRMATION
-		a) OPEN APPS AND TYPE ECLIPSE IN THE SEARCH BAR TO CHECK WHETHER ECLIPSE IS INSTALLED OR NOT
+		a) OPEN APPS AND TYPE ECLIPSE IN THE SEARCH BAR
