@@ -1,0 +1,49 @@
+Spark Installation
+----------------------
+Download Spark from below url.
+Apache Spark 3.1.2 Download link - https://downloads.apache.org/spark/spark-3.3.0/
+From this download  spark-3.3.0-bin-hadoop3.tgz  
+
+Spark: Follow the link and instructions for installation.
+
+https://medium.com/devilsadvocatediwakar/installing-apache-spark-on-ubuntu-8796bfdd0861
+
+Steps for Installation
+-------------------------
+]$ tar xfz spark-3.3.0-bin-hadoop3.tgz  
+]$ sudo mv spark-3.3.0-bin-hadoop3.tgz /usr/local/spark
+
+Setting the SPARK_HOME Environment Variable in ~/.bashrc
+]$ sudo gedit ~/.bashrc
+
+Go to the end of the file and type the following enivronmental variables.
+
+# Spark Variables
+export SPARK_HOME=/usr/local/spark
+export PATH=$PATH:$SPARK_HOME/bin
+# End Spark Variables
+
+Save and close
+To make changes in bashrc permanent source bashrc
+]$ source ~/.bashrc
+
+To verify the installed package
+
+]$ spark-shell
+
+Output
+--------
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /___/ .__/\_,_/_/ /_/\_\   version 3.3.0
+      /_/
+         
+Using Scala version 2.11.8 (OpenJDK 64-Bit Server VM, Java 1.8.0_181)
+Type in expressions to have them evaluated.
+Type :help for more information.
+
+
+Spark Web Interface
+http://localhost:4040/

@@ -1,0 +1,66 @@
+Java Installation
+-----------------------
+Download JDK_1.8 from https://www.oracle.com/java/technologies/downloads/
+Go to option Linux x64 Compressed Archive, 
+https://download.oracle.com/java/18/latest/jdk-18_linux-x64_bin.tar.gz (sha256 )
+
+
+Linux x64 Compressed Archive, 
+
+Java Version 8 to be Installed: https://www.tutorialspoint.com/how-to-install-java-with-apt-get-on-ubuntu-16-04
+
+]$ tar xfz jdk-8u251-linux-x64.tar.gz
+]$ sudo mv jdk-8u251-linux-x64.tar.gz /usr/local/java
+
+Setting the JAVA_HOME Environment Variable in ~/.bashrc
+
+]$ sudo gedit ~/.bashrc
+
+Go to the end of the file and type the following enivronmental variables.
+
+# JAVA Variables
+export JAVA_HOME=/usr/local/java
+export PATH=$JAVA_HOME/bin:{$PATH}
+export CLASSPATH=$JAVA_HOME/lib
+# End JAVA Variables
+
+Save and close
+
+To make changes in bashrc permanent source bashrc
+]$ source ~/.bashrc
+
+
+Using Nano Editor
+
+]$ sudo nano ~/.bashrc
+
+Go to the end of the file and type the following enivronmental variables.
+
+# JAVA Variables
+export JAVA_HOME=/usr/local/java
+export PATH=$JAVA_HOME/bin:{$PATH}
+export CLASSPATH=$JAVA_HOME/lib
+# End JAVA Variables
+
+To Save.
+crtl + o
+
+Asks for the filename to write. 
+/home/username/.bashrc
+Give enter to save it the same file.
+ctrl + x to exit.
+
+To make changes in bashrc permanent source bashrc
+]$ source ~/.bashrc
+
+
+To verify the installed package
+]$ java -version
+
+Output
+-----------
+java version "1.8.0_45"
+Java(TM) SE Runtime Environment (build 1.8.0_45-b14)
+Java HotSpot(TM) 64-Bit Server VM (build 25.45-b02, mixed mode)
+
+-----------------------------------------------------------------------------------------------------------------------------------------

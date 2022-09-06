@@ -1,0 +1,124 @@
+********************************************************************************************************************************************
+				3 -day workshop on Stream Data Management and Analytics in Big Data - Big Stream 2022 during 8-10 Sep 2022
+*********************************************************************************************************************************************
+
+Installation Manual
+--------------------
+The following softwares are to be installed:
+1. Java 
+2. Apache-Spark
+3. Apache-Kafka
+4. Maven
+5. Eclipse
+----------------------------------------------------------------------------------------------------------------------------------
+Steps to  integrate Eclipse IDE with Spark using Maven
+-------------------------------------------------------------
+
+Download Eclipse Mars from the link : https://www.eclipse.org/downloads/packages/release/mars/2
+
+Select the second option named "Eclipse IDE for Java Developers", which has the feasibilty to integrate with Maven. Choose Linux, 64 bit.
+
+Extract the Eclipse-Mars tar file from the installation packages
+
+]$ tar xfz eclipse-jee-mars-R-linux-gtk-x86_64.tar.gz
+
+Move it to the desired location. Say to Documents
+
+]$ sudo mv eclipse-jee-mars-R-linux-gtk-x86_64 /home/username/Documents/Eclipse-Mars
+
+Prerequisites
+-------------
+Java JDK
+Spark
+Maven
+
+To create our own Spark context in Eclipse.
+
+Two ways to do it.
+1. SBT – Scala Build Tool
+2. Maven – Project Object Management
+
+We follow our integration using Maven
+
+1. ]$ mvn archetype:generate
+This will download central repository from internet.
+
+]$ ls -l
+]$ cd .m2/
+.m2]$ ls
+repository
+
+Editor need to be set using Eclipse.
+
+In Eclipse -> help -> Eclipse MarketPlace – to connect to Internet
+
+Eclipse -> Windows -> Preferences -> General -> Network -> Network Connection.
+Active Provider : Manual
+Edit. Set http and https proxy.
+
+https – proxy.ssn.net . Port 8080
+http – proxy.ssn.net . Port 8080
+SOCKS proxy SHOULD NOT BE SET.
+
+Install Scala plugin.
+In google give : scala-ide.org 
+In Update Site
+Copy the URL: http://download.scala-ide.org/sdk/lithium/e44/scala211/stable/site
+
+
+Help -> Install new software.
+Add
+Name: Scala
+Location: give scala URL
+
+select all -> Next - > Next
+Accept Licence -> finish.
+
+Close and open eclipse
+When you open eclipse, sometimes it shows : Setup Diagnosis
+Check – Use Recommended settings -> OK
+
+File -> New Project -> scala
+Setup scala on Eclipse, it does not require scala to be installed manually. Java is enough. It gets executed from scala URL
+
+File -> new -> project -> Maven -> Maven Project
+
+Check two text boxes to skip archetype and give next.
+
+Artifact:
+Specify the following;
+
+Group ID: Spark Examples
+Artifact ID: Demo
+Version: 0.0.1-SNAPSHOT
+Package: .jar     -- custom version is git
+Give OK
+
+Failed to create Project Demo.
+Eclipse and Maven needs Internet connection.
+
+Windows-> preferences -> Maven-> Installation -> add -> External Repository
+give /usr/local/maven   --- this is maven installed path.
+Name: maven
+Finish
+Select Maven-> Apply. OK
+
+/usr/local/maven/conf/settings.xml
+Set proxy in settings.xml.
+
+In termianal
+]$ sudo cp /usr/local/maven/conf/settings.xml /home/hduser/.m2
+
+In Eclipse
+Windows -> Preferences -> Maven - > User Settings
+
+User Settings:  /home/hduser/.m2/settings.xml
+Local Repository: /home/hduser/.m2/repository
+
+Demo -> RightClick -> maven -> Update Project
+select project name and give OK
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
