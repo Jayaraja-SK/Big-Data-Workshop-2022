@@ -1,0 +1,5 @@
+Publish-Subscribe Tutorial: https://ably.com/topic/pub-sub#:~:text=The%20Publish%2FSubscribe%20pattern%2C%20also,the%20publisher%20to%20the%20subscribers.
+
+Publish-Subscribe Architecture: https://www.youtube.com/watch?v=O1PgqUqZKTA
+
+Publish-Subscribe Code Example: https://github.com/cevheri/java-kafka-jhipster-example
