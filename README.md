@@ -2,6 +2,10 @@
 
 ## Credits
 https://github.com/Jayaraja-SK/Stream-Data-Ingestion-and-Processing-Workshop
+
+### Sample Code
+https://github.com/sasikumarvenkat/GenerateStreamData
+
 ### Directory Structure
 - [Install Software](Installation-Procedure/Latest): Install the latest versions of Java, Spark, Kafka, Maven and Eclipse
 - [Tutorials](Tutorials/) Learn the basics of publish-subscribe model, Spark SQL
