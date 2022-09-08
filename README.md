@@ -4,7 +4,8 @@
 https://github.com/Jayaraja-SK/Stream-Data-Ingestion-and-Processing-Workshop
 
 ### Sample Code
-https://github.com/sasikumarvenkat/GenerateStreamData
+- https://github.com/sasikumarvenkat/GenerateStreamData
+- https://github.com/sasikumarvenkat/BigStream-2022
 
 ### Directory Structure
 - [Install Software](Installation-Procedure/Latest): Install the latest versions of Java, Spark, Kafka, Maven and Eclipse
