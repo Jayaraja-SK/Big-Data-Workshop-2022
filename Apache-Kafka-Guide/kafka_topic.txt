@@ -6,33 +6,33 @@ RUN - cd /opt/kafka
 
 -----SINGLE BROKER-----
 
-bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic topicName
+bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic topicName
 
 
 
 -----MULTI BROKER-----
 
-bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 2 --partitions 1 --topic topicName
+bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 2 --partitions 1 --topic topicName
 
 
 
 ***PRINT THE NAME OF TOPICS CREATED TILL DATE***
 
-bin/kafka-topics.sh --list --zookeeper localhost:2181
+bin/kafka-topics.sh --list --bootstrap-server localhost:9092
 
 
 
 
 ***DESCRIBE TOPIC***
 
-bin/kafka-topics.sh --describe --topic topicName --zookeeper localhost:2181
+bin/kafka-topics.sh --describe --topic topicName --bootstrap-server localhost:9092
 
 
 
 
 ***DELETE A TOPIC***
 
-bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic topicName
+bin/kafka-topics.sh --bootstrap-server localhost:9092 --delete --topic topicName
 
 
 
@@ -55,6 +55,7 @@ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic topicNam
 ***START CONSUMER FOR MULTIPLE TOPICS***
 
 bin/kafka-console-consumer.sh --bootstrap-server localhost:9092,localhost:9093,localhost:9094 --topic topicName --consumer-property group.id=testTopic-group
+
 
 
 
