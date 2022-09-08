@@ -1,5 +1,5 @@
 1. JAVA:
-	FOLLOW THE STEPS BELOW:
+	FOLLOW THE BELOW STEPS:
 		a) RUN - sudo apt update
 		b) RUN - sudo apt install default-jdk
 		c) RUN - sudo apt update
@@ -7,34 +7,35 @@
 
 	CONFIRMATION:
 		a) WRITE A JAVA PROGRAM
-		b) COMPILE AND RUN IT IN THE TERMINAL USING javac "FILE_NAME.java" and java "FILE_NAME" 
+		b) COMPILE AND RUN IT IN THE TERMINAL USING javac "FILE_NAME.java" and java "FILE_NAME" RESPECTIVELY
 
 
 2. SPARK:
-	FOLLOW THE STEPS BELOW:
+	FOLLOW THE BELOW STEPS:
 		a) RUN - sudo apt install default-jdk scala git -y
-		b) INSTALL THE PACKAGE "spark-3.1.2-bin-hadoop2.7.tgz" FROM "https://downloads.apache.org/spark/spark-3.1.2/"
+		b) INSTALL THE PACKAGE "spark-3.1.3-bin-hadoop2.7.tgz" FROM "https://downloads.apache.org/spark/spark-3.1.3/"
 		c) RUN - tar xvf spark-*
-		d) RUN - sudo mv spark-3.1.2-bin-hadoop2.7 /opt/spark
+		d) RUN - sudo mv spark-3.1.3-bin-hadoop2.7 /opt/spark
 		e) RUN - echo "export SPARK_HOME=/opt/spark" >> ~/.profile
-		f) RUN - echo "export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin" >> ~/.profile
+		f) RUN - echo "export PATH=$PATH:/opt/spark/bin:/opt/spark/sbin" >> ~/.profile
 		g) RUN - echo "export PYSPARK_PYTHON=/usr/bin/python3" >> ~/.profile
 		h) RUN - source ~/.profile
 
 	CONFIRMATION:
 		a) RUN - spark-shell
+		b) CLICK THE IP ADDRESS PRESENT IN THE TERMINAL TO CHECK WHETHER EVERYTHING IS ALRIGHT
 
 
 3. KAFKA
-	FOLLOW THE STEPS BELOW:
-		a) INSTALL THE PACKAGE "kafka_2.12-2.8.0.tgz" FROM "https://kafka.apache.org/downloads.html"
+	FOLLOW THE BELOW STEPS
+		a) INSTALL THE PACKAGE "kafka_2.12-3.2.1.tgz" FROM "https://kafka.apache.org/downloads.html"
 		b) RUN - tar xvf kafka*
-		c) RUN - sudo mv kafka_2.12-2.8.0 /opt/kafka
+		c) RUN - sudo mv kafka_2.12-3.2.1 /opt/kafka
 		d) RUN - cd /etc/systemd/system
 		e) RUN - sudo touch zookeeper.service
 		f) RUN - sudo chmod 777 zookeeper.service
 		g) RUN - sudo cat > zookeeper.service
-		h) PASTE THE FOLLOWING TEXT:
+		h) PASTE THE BELOW TEXT
 			[Unit]
 			Description=Apache Zookeeper server
 			Documentation=http://zookeeper.apache.org
@@ -52,13 +53,13 @@
 			[Install]
 			WantedBy=multi-user.target
 
-		***NOTE: UPDATE THE ENVIRONMENT VARIABLES WITH THE PATH TO THE VERSION YOU HAVE***
+		***NOTE: UNDER ENVIRONMENT VARIABLE, PASTE THE CORRECT PATH IN IT FOR THE VERSION THAT YOU HAVE***
 		
 		i) RUN - sudo chmod 644 zookeeper.service
 		j) RUN - sudo touch kafka.service
 		k) RUN - sudo chmod 777 kafka.service
 		l) RUN - sudo cat > kafka.service
-		m) PASTE THE FOLLOWING TEXT:
+		m) PASTE THE BELOW TEXT
 			[Unit]
 			Description=Apache Kafka Server
 			Documentation=http://kafka.apache.org/documentation.html
@@ -82,14 +83,14 @@
 		t) RUN - sudo systemctl status kafka
 
 	CONFIRMATION:
-		a) RUN THE COMMANDS PRESENT IN LINE (r) AND (t), CHECK IF YOU GET THE STATUS AS ACTIVE(GREEN SYMBOL)
+		a) IF YOU GET THE STATUS AS ACTIVE(GREEN SYMBOL) WHEN YOU RUN THE COMMANDS PRESENT IN LINE (r) AND (t), THEN EVERYTHING IS PERFECT
 
 
 4. MAVEN
-	FOLLOW THE STEPS BELOW:
-		a) INSTALL THE PACKAGE "apache-maven-3.8.1-bin.tar.gz" FROM "https://maven.apache.org/download.cgi"
+	FOLLOW THE BELOW STEPS
+		a) INSTALL THE PACKAGE "apache-maven-3.8.6-bin.tar.gz" FROM "https://maven.apache.org/download.cgi"
 		b) RUN - tar xvf apache-maven*
-		c) RUN - sudo mv apache-maven-3.8.1 /opt/maven
+		c) RUN - sudo mv apache-maven-3.8.6 /opt/maven
 		d) RUN - sudo nano /etc/profile.d/maven.sh
 		e) PASTE THE BELOW TEXT
 			export JAVA_HOME=/usr/lib/jvm/default-java
@@ -105,10 +106,9 @@
 	CONFIRMATION
 		a) RUN - mvn -version
 
-
 5. ECLIPSE
-	FOLLOW THE STEPS BELOW:
+	FOLLOW THE BELOW STEPS
 		a) RUN - sudo snap install --classic eclipse
 
 	CONFIRMATION
-		a) OPEN APPS AND TYPE ECLIPSE IN THE SEARCH BAR
+		a) OPEN APPS AND TYPE ECLIPSE IN THE SEARCH BAR TO CHECK WHETHER ECLIPSE IS INSTALLED OR NOT
