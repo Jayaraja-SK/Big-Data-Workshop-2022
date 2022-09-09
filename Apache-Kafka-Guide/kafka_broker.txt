@@ -2,9 +2,8 @@
 
 OPEN A NEW TERMINAL
 
-RUN - cd /opt/kafka
-
-RUN - sudo bin/zookeeper-server-start.sh config/zookeeper.properties
+cd /opt/kafka
+sudo bin/zookeeper-server-start.sh config/zookeeper.properties
 
 
 
@@ -13,30 +12,30 @@ RUN - sudo bin/zookeeper-server-start.sh config/zookeeper.properties
 
 OPEN A NEW TERMINAL
 
-RUN - cd /opt/kafka
-
-RUN - sudo bin/kafka-server-start.sh config/server.properties
+cd /opt/kafka
+sudo bin/kafka-server-start.sh config/server.properties
 
 
 
 *****CREATE A NEW BROKER IN KAFKA*****
 
-RUN - cd /opt/kafka
+cd /opt/kafka
+cp config/server.properties ~/new.txt
+gedit ~/new.txt
 
-RUN - cp config/server.properties ~/new.txt
 
-
----OPEN NEW.TXT FILE USING TEXT EDITOR PRESENT IN HOME DIRECTORY--- //DON'T REMOVE ANYTHING. JUST CHANGE THE BELOW VARIABLES AND REMOVE # SYMBOL PRESENT IN FRONT OF LISTENERS VARIABLE---
+---DON'T REMOVE ANYTHING. JUST CHANGE THE BELOW VARIABLES AND REMOVE `#` SYMBOL IN FRONT OF LISTENERS VARIABLE---
 
 broker.id=1
 listeners=PLAINTEXT://:9093
-log.dir=/tmp/kafka-logs-1
+log.dirs=/tmp/kafka-logs-1
 
 
-RUN - cp new.txt /opt/kafka/config/server-1.properties
+# RUN THE BELOW COMMANDS
 
-RUN - cd /opt/kakfa
+cp ~/new.txt /opt/kafka/config/server-1.properties
+rm ~/new.txt
+sudo bin/kafka-server-start.sh config/server-1.properties
 
-RUN - sudo bin/kafka-server-start.sh config/server-1.properties
 
 
